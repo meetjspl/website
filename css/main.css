@@ -1,0 +1,873 @@
+/**
+*
+* CSS for Meet.js
+* All rights reserved.
+*
+* @author: ChemikPIL - chemikpil.pl
+* @created: 01 Jul 2011
+* @last-updated: 07 Jul 2011
+*
+*/
+
+/**
+*
+* CSS Reset
+*
+*/
+
+body, p, div, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+h1, h2, h3, h4, h5, h6, ul, ol, li {
+  margin: 0; padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+ins, del { text-decoration: none; }
+a img{ border: none; }
+ul, ol { list-style: none; padding: 0;}
+.hidden{ display: none; }
+.left{ float: left; }
+.right{ float: right; }
+.clear-both{
+	width: 100%; height: 1px;
+	clear: both;
+	display: block;
+}
+blockquote:after, blockquote:before, q:after, q:before {content: "";}
+
+abbr[title], acronym[title] {
+    border-bottom-width: 0;
+}
+
+/**
+* Globals
+*/
+
+@font-face{
+	font-family: Bevan; 
+	src: url('Bevan.ttf');
+}
+
+body{
+	background: #302b36 url('../img/main-bg.png');
+	font: 13px Helvetica, Tahoma, Arial;
+	color: #fff;
+}
+
+h1, article h2{
+	font: 20px 'Bevan', Arial;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+#page > header, #page > footer, .content-container, #become-prelegent > form, #event-participants, #description{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.content-container{
+	position: relative;
+}
+
+.sprite-bg{background: url('../img/sprite-bg.png') no-repeat;}
+
+#content{
+	border-top: 1px solid #423c4a;
+	padding-top: 1px;
+}
+
+#event-list{
+	border-top: 1px dotted #423c4a;
+}
+
+/**
+* Header
+*/
+
+#page > header{height: 100px;}
+
+#logo{
+	display: block;
+	margin-top: 18px;
+	float: left;
+}
+
+#logo > img{background-position: 0 0}
+
+header > nav{
+	float: right;
+	width: 495px; height: 100px;
+	line-height: 100px;
+}
+
+header > nav > ul {float: left}
+
+header > nav li{
+	float: left;
+	margin-right: 10px;
+}
+
+header > nav li a{
+	color: #24a2a7;
+	font: 13px 'Bevan', Arial;
+	padding: 0 5px;
+}
+
+header > nav li a:hover{
+	background: #24a2a7;
+	color: #fff;
+	text-decoration: none;
+}
+
+header > nav .social-media-link{
+	float: left;
+	display: block;
+	width: 22px; height: 22px;
+	margin-top: 39px;
+}
+
+#facebook{background-position: -236px 0; margin-right: 10px;}
+#facebook:hover{background-position: -236px -25px;}
+#twitter{background-position: -261px 0;}
+#twitter:hover{background-position: -261px -25px;}
+
+/**
+* Event list
+*/
+
+#event-list h1:first-child{
+	font: 37px 'Bevan', serif;
+	color: #fff;
+	width: 50%;
+	line-height: 45px;
+	min-height: 134px;
+	margin: 17px 0 0 0;
+}
+
+#active-event-city{
+	font-style: normal;
+	color: #e6e074;
+}
+
+#all-events{
+	width: 953px;
+	min-height: 320px; 
+}
+
+/**
+* Prelegents
+*/
+
+.speech{
+	border-bottom: 1px solid #b4cc46;
+	background: #99b41e;
+	padding-left: 20px;
+	clear: both;
+	height: 50px;
+}
+
+.speech:nth-child(1), .speech:nth-child(2){width: 500px;}
+
+.speech > h2{
+	font: 15px 'Bevan', Arial;
+	color: #424e0a;
+	border-right: 1px solid #b4cc46;
+	margin: 0 0 5px 0;
+	float: left;
+	padding-right: 10px;
+}
+
+.speech > span, .speech > a{
+	font-size: bold;
+	border-right: 1px solid #b4cc46;
+	color: #fff;
+	padding: 0 10px 5px 10px;
+	float: left;
+}
+
+.speech .speaker{
+	clear: left;
+	padding-left: 0;
+}
+
+.prelegent{
+	width: 491px; height: 89px;
+	float: left;
+	background-image: url('../img/bg-prelegent.png');
+	margin: 0 14px 14px 0;
+}
+
+.prelegent img{
+	border: 3px solid #443d4c;
+	float: left;
+}
+
+.prelegent > .prelegent-info{
+	float: left;
+	width: 402px;
+}
+
+.prelegent:nth-child(even){
+	margin-right: 0;
+}
+
+.prelegent-info > h3{
+	color: #2e2934;
+	font-size: 15px;
+	border-right: 1px solid #b4cc46;
+	padding: 0 10px;
+	float: left;
+	margin-bottom: 10px;
+}
+.prelegent-info > .speaker{clear: left;}
+.prelegent-info > .speaker, .prelegent-info > .company, .prelegent-info > .website{
+	float: left;
+	border-right: 1px solid #b4cc46;
+	font-size: 13px;
+	padding: 0 10px;
+	color: #fff;
+}
+
+.prelegent-info > .rate{
+	clear: left;
+	display: block;
+	border-top: 1px solid #b4cc46;
+	position: relative;
+}
+
+.prelegent-info > .rate > a{
+	font-size: 15px;
+	float: right;
+	color: #46530b;
+	padding: 3px 32px 0 10px;
+	border-left: 1px solid #b4cc46;
+}
+
+.prelegent-info > .rate:after{
+	content: ">";
+	color: #89a21b;
+	font-size: 10px;
+	display: block;
+	background-color: #fff;
+	width: 13px; line-height: 13px;
+	text-align: center;
+	position: absolute;
+	top: 8px; right: 11px;
+}
+
+/**
+* Event Map
+*/
+
+#event-map{
+	position: absolute;
+	top: 74px; right: 0;
+	width: 496px; height: 366px;
+	background-position: 0 -69px;
+}
+
+.event-description{
+	position: absolute;
+	top: -81px; left: 52px;
+	width: 340px; height: 130px;
+	background: #fff url('../img/trapeze-info.png') no-repeat;
+	font: 15px 'Bevan', Arial;
+	color: #727272;
+	z-index: 100;
+	padding-top: 9px;
+	display: none;
+}
+
+.active > .event-description{display: block;}
+
+.event-description > .address{padding: 10px; line-height: 20px;}
+.event-description > .start-time{display: block; float: left; padding: 5px 10px;}
+.event-description > .directions{display: block; float: right; padding: 5px 35px; position: relative}
+.event-description > .directions a{color: #727272;}
+.event-description > .directions:after{
+	content: ">";
+	color: #727272;
+	font-size: 10px;
+	display: block;
+	background: #f0f0f0;
+	width: 13px; line-height: 13px;
+	text-align: center;
+	position: absolute;
+	top: 10px; right: 17px;
+}
+
+.event-description > .join{
+	display: block;
+	background: #f0f0f0;
+	line-height: 35px;
+	padding: 0 10px;
+	color: #b4cc46;
+	position: absolute;
+	clear: both;
+	left: 0; right: 0;
+	bottom: 0;
+}
+
+.event-description > .join:after{
+	content: ">";
+	color: #6d8114;
+	font-size: 10px;
+	display: block;
+	background: #b4cc46;
+	width: 13px; line-height: 13px;
+	text-align: center;
+	position: absolute;
+	top: 10px; left: 130px;
+}
+
+#event-map > li > a{
+	display: block;
+	min-width: 67px;
+	text-align: center;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	font: 15px 'Bevan', Arial;
+}
+
+.event-date-block{
+	width: 49px; height: 56px;
+	background-color: #b4cc46;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 4px;
+	font: 15px 'Bevan', Arial;
+	color: #fff;
+}
+
+.event-date-block:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -6px;
+	width: 43px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: transparent transparent #e6e074 transparent;
+}
+
+.event-date-block > .event-day{
+	display: block;
+	height: 36px;
+	font: bold 30px Helvetica, Arial;
+}
+
+.event-date-block > .event-month{
+	display: block;
+	background-color: #99b41e;
+	font-size: 12px;
+}
+
+#event-map > li > a .event-city{
+	text-shadow: #188387 0 -2px 0;
+}
+
+.krakow-event > a{top: 235px; left: 246px;}
+.poznan-event > a{top: 71px; left: 81px;}
+.warsaw-event > a{top: 84px; left: 261px;}
+
+#event-map .active{
+	width: 300px;
+	height: 300px;
+}
+
+.krakow-event.active{background: url('../img/dotted-2.png') no-repeat 159px 59px;}
+.warsaw-event.active{background: url('../img/dotted-1.png') no-repeat 233px 59px;}
+.poznan-event.active{background: url('../img/dotted-3.png') no-repeat 141px 59px;}
+
+/**
+* Participants
+*/
+
+#event-participants{padding: 20px 0;}
+#event-participants > h2{float: left; margin-right: 25px;}
+
+#event-list h1:last-of-type {float: left; margin: 5px 25px 0 0; line-height: 65px;}
+.event-participants{
+	display: block;
+	width: 776px;
+	float: left;
+	padding-bottom: 10px;
+}
+
+.event-participants li{float: left; margin: 4px; position: relative; cursor: pointer;}
+.event-participants img{border: 6px solid #443d4c;}
+.event-participants li > p{
+	position: absolute;
+	top: 55px; left: 0;
+	padding: 5px;
+	background-color: #2da6ab;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+	display: none;
+	z-index: 100;
+}
+.event-participants li:hover > img{border-color: #65c7ba;}
+.event-participants li:hover > p{display: inline;}
+
+/**
+* Past Event
+*/
+
+#past-event-list, #prelegents{
+	background-image: url('../img/bg-past-event.png');
+	padding: 20px 0;
+	font: 20px 'Bevan', Arial;
+	color: #fff;
+	clear: both;
+	overflow: auto;
+}
+
+#past-event-list li{float: left; margin: 10px 20px 20px 0; width: 490px;}
+#past-event-list li:nth-child(2n){margin-right: 0}
+
+#past-event-list li > img{
+	border: 5px solid #443d4c;
+	float: left;
+}
+
+#past-event-list li  > div{
+	float: left;
+	width: 255px; height: 80px;
+	background: url('../img/bg-event-last.png');
+}
+
+#past-event-list li  > div a{
+	font-size: 15px;
+	color: #2e2934;
+	border-left: 1px solid #31b6bb;
+	padding-left: 10px;
+}
+
+#past-event-list li  > div > span{display: block; float: left}
+
+#past-event-list .date, #past-event-list .location{
+	padding: 10px 20px 0; 
+	height: 25px
+}
+
+#past-event-list .date{ border-right: 1px solid #31b6bb;}
+
+#past-event-list .review{
+	border-top: 1px solid #31b6bb;
+	width: 205px; 
+	line-height: 20px;
+	text-align: right;
+	margin: 16px 0 0 20px;
+	padding-right: 30px;
+	position: relative;
+}
+
+#past-event-list .review:after{
+	content: ">";
+	color: #219196;
+	font-size: 10px;
+	display: block;
+	background: #31b6bb;
+	width: 13px; line-height: 13px;
+	text-align: center;
+	position: absolute;
+	top: 5px; right: 8px;
+}
+
+/**
+* meet.js description
+*/
+
+#meet-js-description, #meet-js-description h1{color: #2e2934;}
+#meet-js-description h1{margin: 40px 0;}
+#meet-js-description{
+	background-image: url('../img/bg-meet.png'); 
+	overflow: auto;
+}
+
+#meet-js-description a{color: #24a2a7;}
+
+#initiative-description, #meet-js-description .twitter-feed{
+	float: left;
+}
+
+#initiative-description{
+	border-right: 1px solid #fff;
+	width: 489px;
+	font-size: 17px;
+	padding-right: 20px;
+	position: relative;
+}
+
+#initiative-description > p:last-child{
+	font: 15px 'Bevan', Arial;
+	margin: 100px 0 20px;
+}
+#initiative-description > p:last-child a{color: #424e0a}
+
+#initiative-description .local-organizers{
+	height: 50px; width: 635px;
+	background-color: #fff;
+	border-bottom: 3px solid #b2ad3f;
+	position: absolute;
+	left: -350px;
+	bottom: 70px;
+	z-index: 50;
+}
+
+#initiative-description h2 {
+	position: absolute;
+	bottom: 83px;
+	left: 0;
+	font: 17px 'Bevan', Arial;
+	z-index: 100;
+}
+
+#initiative-description .local-organizers li{
+	float: right; 
+	padding: 0 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+#initiative-description .local-organizers li > p{
+	position: absolute;
+	top: 50px; left: 0;
+	padding: 5px;
+	background-color: #2e2934;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+	display: none;
+}
+#initiative-description .local-organizers li:hover{background-color: #2e2934;}
+#initiative-description .local-organizers li:hover p{display: inline;}
+.twitter-feed{width: 490px;}
+#meet-js-description .twitter-feed h1{
+	background-position: -300px 40px;
+	margin: 0;
+	padding: 40px 10px 40px 100px;
+	border-bottom: 1px solid #fff;
+}
+
+.twitter-feed a, .twitter-feed h1 > span{color: #24a2a7;}
+
+.twitter-feed > ul > li{
+	display: block;
+	padding: 20px;
+	font-size: 17px;
+	border-bottom: 1px solid #fff;
+}
+
+
+.twitter-feed > ul > li > .date, .twitter-feed a{
+	font-weight: bold;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+
+/**
+* Become prelegent
+*/
+
+#become-prelegent, #comments{
+	background-image: url('../img/bg-become.png');
+	padding: 20px 0;
+	height: 355px;
+	overflow: hidden;
+	clear: both;
+}
+
+#comments{height: auto;}
+
+#become-prelegent form{position: relative;}
+
+#become-prelegent h1, #comments h2{color: #24a2a7;}
+
+#become-prelegent .choose-city, #become-prelegent .speaker-info{
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+#become-prelegent .choose-city > span{
+	font: 15px 'Bevan', Arial;
+	color: #9f9f9f;
+	line-height: 50px;
+	float: left;
+}
+
+#become-prelegent .choose-city > label{
+	display: block;
+	width: 65px;
+	color: #fff;
+	margin: 0 10px;
+	cursor: pointer;
+	float: left;
+}
+#become-prelegent .choose-city > label > .event-date{
+	width: 100%; height: 80px;
+}
+
+#become-prelegent .choose-city > label .event-day{
+	display: block;
+	background-color: #9f9f9f;
+	font-size: 35px;
+	line-height: 50px;
+	text-align: center;
+}
+
+#become-prelegent .choose-city > label .event-month{
+	display: block;
+	background-color: #747474;
+	font: 15px 'Bevan', Arial;
+	width: 65px; line-height: 30px;
+	text-align: center;
+	position: absolute;
+	z-index: 100;
+}
+
+#become-prelegent .choose-city > label > .event-city{
+	display: block;
+	font: 45px 'Bevan', Arial;
+	background-color: #9F9F9F;
+	-webkit-transform: rotate(-56deg);
+	-moz-transform: rotate(-56deg);
+	-o-transform: rotate(-56deg);
+	-ms-transform: rotate(-56deg);
+	transform: rotate(-56deg);
+	margin: 120px 0 0 -263px;
+	height: 51px;
+	width: 377px;
+	padding: 3px 15px 0 0;
+	text-align: right;
+}
+
+#become-prelegent .choose-city > input:checked + label .event-day{background-color: #24a2a7;}
+#become-prelegent .choose-city > input:checked + label .event-month{background-color: #0a7377;}
+#become-prelegent .choose-city > input:checked + label .event-city{background-color: #24a2a7;}
+
+#become-prelegent .choose-city input[type=radio]{display: none;}
+
+#become-prelegent .speaker-info ::-webkit-input-placeholder{
+	color: #747474;
+	font: 14px 'Bevan', Arial;
+}
+
+#become-prelegent .speaker-info :-moz-placeholder{
+	color: #747474;
+	font: 14px 'Bevan', Arial;
+}
+
+#become-prelegent .speaker-info  input, #become-prelegent .speaker-info  textarea{
+	border: 0;
+	background-color: #f0f0f0;
+	padding: 10px;
+}
+
+#become-prelegent .speaker-info  input{
+	height: 20px; width: 215px;
+}
+
+#become-prelegent .speaker-info  textarea{
+	clear: both;
+	margin-top: 25px;
+	width: 480px; height: 120px;
+}
+
+#become-prelegent .speaker-info  button{
+	float: right;
+	border: 0;
+	width: 180px; height: 42px;
+	padding-right: 20px;
+	background-color: #3e3845;
+	color: #fff;
+	font: 14px 'Bevan', Arial;
+	margin-top: -3px;
+}
+
+#become-prelegent .speaker-info  button > span{
+	text-decoration: underline;
+}
+
+#become-prelegent .speaker-info  button:after{
+	content: ">";
+	color: #219196;
+	font-size: 10px;
+	display: block;
+	background: #31b6bb;
+	width: 13px; line-height: 13px;
+	text-align: center;
+	position: absolute;
+	bottom: 14px; right: 11px;
+}
+
+/**
+* Article
+*/
+
+#page > article{
+	border-top: 1px solid #423c4a;
+	padding-top: 1px;
+}
+
+#page > article > header{
+	width: 100%; height: 150px;
+	font-family: 'Bevan', Arial;
+	border-top: 1px dotted #423c4a;
+	padding-top: 30px;
+}
+
+.header-content{
+	width: 1000px; height: 150px;
+	margin: 0 auto;
+	background: url('../img/meeting-info-bg.png');
+	position: relative;
+}
+
+.header-content:before{
+	content: "";
+	display: block;
+	width: 50%; height: 150px;
+	background: url('../img/meeting-info-bg.png');
+	margin-left: -500px;
+	position: absolute;
+}
+
+.header-content:after{
+	content: "";
+	border-bottom: 1px solid #2e2934;
+	width: 150%;
+	position: absolute;
+	bottom: 50px;
+	left: -500px;
+}
+
+.header-content  > .event-date-block{
+	float: left;
+	margin-top: 23px;
+}
+
+.header-content  > h1{
+	float: left;
+	margin: 0 0 0 20px;
+	font-size: 70px;
+	text-transform: capitalize;
+	height: 100px;
+	overflow: hidden;
+}
+
+.header-content  > nav{
+	float: right;
+}
+
+.header-content  > nav li{
+	float: left;
+	width: 170px; height: 65px;
+	height: 65px;
+	border-left: 1px solid #2e2934;
+	text-align: center;
+	font-size: 25px;
+	padding: 0;
+	position: relative;
+}
+
+.header-content  > nav li a{
+	color: #655d6e;
+}
+
+.header-content  > nav .prev-meeting{
+	margin-top: 35px;
+}
+
+.header-content  > nav .prev-meeting:before{
+	content: "<";
+	color: #443d4c;
+	font-size: 20px;
+	display: block;
+	background-color: #655d6e;
+	width: 25px; line-height: 25px;
+	text-align: center;
+	position: absolute;
+	top: 6px; left: 15px;
+}
+
+.header-content  > nav .next-meeting{
+	padding-top: 35px;
+	height: 30px;
+}
+
+
+.header-content  > nav .next-meeting:after{
+	content: ">";
+	color: #443d4c;
+	font-size: 20px;
+	display: block;
+	background-color: #655d6e;
+	width: 25px; line-height: 25px;
+	text-align: center;
+	position: absolute;
+	top: 41px; right: 15px;
+}
+
+.header-content  > span{
+	height: 20px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	font: 15px 'Bevan', Arial;
+	color: #fff;
+	padding: 15px 30px 0 30px;
+}
+
+.header-content  > .hour{
+	clear: left;
+	color: #a49cad;
+	padding-left: 0;
+	border-right: 1px solid #2e2934;
+}
+
+#description{
+	margin-top: 30px;
+	overflow: auto;
+}
+
+.article-content{
+	float: left;
+	width: 650px;
+}
+
+.article-content p{
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+.gallery{
+	width: 329px;
+	float: right;
+}
+
+.gallery > img{
+	display: block;
+	border: 5px solid #443d4c;
+	margin-bottom: 20px;
+}
+
+/**
+* Footer
+*/
+
+#page > footer{
+	color: #9f9f9f;
+	padding: 10px 0;
+}
